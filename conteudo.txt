@@ -7,3 +7,6 @@ $ cd C:/Desenvolvimento/GitAndGithub/useGitAndGithub
 
 4º Para o git adicionar os arquivos existes ao repositorio usamos o comando abaixo
 'git add index.html' ou 'git add .' para adicionar todos
+
+4º Para o git salvar os arquivos no repositorio executamos o comando
+git commit -m 'Criando arquivo index.html e conteudo.txt'
