@@ -1,12 +1,30 @@
 1º Acessar a pasta onde está o projeto pelo GitBash
 $ cd C:/Desenvolvimento/GitAndGithub/useGitAndGithub
-
+----------
 2º Executar o comando 'git init' para inicializar um repositorio
-
+----------
 3º Saber informações sobre o repositorio digite 'git status'
-
-4º Para o git adicionar os arquivos existes ao repositorio usamos o comando abaixo
+----------
+4º Para o git adicionar uma modificação nos arquivos existes ao repositorio usamos o comando abaixo
 'git add index.html' ou 'git add .' para adicionar todos
-
+----------
 4º Para o git salvar os arquivos no repositorio executamos o comando
 git commit -m 'Criando arquivo index.html e conteudo.txt'
+----------
+5º Mostrar o histórico de commits
+git log
+git log --oneline  //Mostrar 1 log por linha
+
+Site com opções 
+https://devhints.io/git-log
+----------
+
+----------
+livro sobre git 'https://git-scm.com/book/pt-br/v2'
+Definições:
+HEAD: Estado atual do nosso código, ou seja, onde o Git nos colocou
+Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.
+
+Alterar configuração local ou global do git
+git config --local ou config --global
