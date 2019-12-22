@@ -1,0 +1,9 @@
+1º Acessar a pasta onde está o projeto pelo GitBash
+$ cd C:/Desenvolvimento/GitAndGithub/useGitAndGithub
+
+2º Executar o comando 'git init' para inicializar um repositorio
+
+3º Saber informações sobre o repositorio digite 'git status'
+
+4º Para o git adicionar os arquivos existes ao repositorio usamos o comando abaixo
+'git add index.html' ou 'git add .' para adicionar todos
