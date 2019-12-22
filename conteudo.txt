@@ -5,20 +5,21 @@ $ cd C:/Desenvolvimento/GitAndGithub/useGitAndGithub
 ----------
 3º Saber informações sobre o repositorio digite 'git status'
 ----------
-4º Para o git adicionar uma modificação nos arquivos existes ao repositorio usamos o comando abaixo
+4º Para o git marcar o arquivo para ser salvo
 'git add index.html' ou 'git add .' para adicionar todos
 ----------
-4º Para o git salvar os arquivos no repositorio executamos o comando
+4º Para o git salvar os arquivos no repositorio
 git commit -m 'Criando arquivo index.html e conteudo.txt'
 ----------
 5º Mostrar o histórico de commits
 git log
 git log --oneline  //Mostrar 1 log por linha
+git log --pretty="format:%h %s" //traz o hash resumido seguido pela mensagem do commit
 
 Site com opções 
 https://devhints.io/git-log
 ----------
-
+arquivo especial do Git, chamado .gitignore onde é informado arquivos que não devem ser monitorados
 ----------
 livro sobre git 'https://git-scm.com/book/pt-br/v2'
 Definições:
@@ -28,3 +29,11 @@ index: Local onde o Git armazena o que será commitado, ou seja, o local entre a
 
 Alterar configuração local ou global do git
 git config --local ou config --global
+
+--------------------------------------------------------------------------------------------------------------------------
+/c/Desenvolvimento/GitAndGithub/servidor
+Como este servidor será um repositório do Git que somente armazenará as alterações, ou seja, não o acessaremos para editar arquivos poderá ser criado usando a opção --bare.
+Cujo parâmetro indica que este repositório é puro, que contém apenas as alterações dos arquivos, e não uma cópia física de cada um dos arquivos.
+git init --bare
+
+
