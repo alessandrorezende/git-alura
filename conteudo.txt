@@ -31,9 +31,16 @@ Alterar configuração local ou global do git
 git config --local ou config --global
 
 --------------------------------------------------------------------------------------------------------------------------
-/c/Desenvolvimento/GitAndGithub/servidor
+Diretório: /c/Desenvolvimento/GitAndGithub/servidor
 Como este servidor será um repositório do Git que somente armazenará as alterações, ou seja, não o acessaremos para editar arquivos poderá ser criado usando a opção --bare.
 Cujo parâmetro indica que este repositório é puro, que contém apenas as alterações dos arquivos, e não uma cópia física de cada um dos arquivos.
 git init --bare
 
+Vinculando o repositorio local a um repositorio remoto na que está na pasta servidor
+git remote add local /c/Desenvolvimento/GitAndGithub/useGitAndGithub/servidor
 
+Saber se o repositorio local está vinculado a algum repositorio na rede
+git remote -v
+
+Diretório do outro usuário: C:/Desenvolvimento/GitAndGithub/coworking
+git clone /c/Desenvolvimento/GitAndGithub/servidor projeto
