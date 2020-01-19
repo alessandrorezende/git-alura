@@ -109,6 +109,10 @@ git diff ea539b3..6ca12ac
 Criaremos um marco para onde poderemos ir, e que terá um código correspondente àquele estado
 git tag -a v0.1.0 -m "Lançando a primeira versão (BETA) da aplicação de cursos".
 
+Enviando para o servidor
+git push local master
+git push local v0.1.0
+
 --------------------------------------------------------------------------------------------------------------------------
 Que o Git pode nos ajudar a desfazer alterações que não vamos utilizar;
 Que, para desfazer uma alteração antes de adicioná-la para commit (com git add), podemos utilizar o comando git checkout -- <arquivos>;
