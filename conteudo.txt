@@ -13,8 +13,10 @@ git commit -m 'Criando arquivo index.html e conteudo.txt'
 ----------
 5º Mostrar o histórico de commits
 git log
-git log --oneline  //Mostrar 1 log por linha
+git log --oneline                //Mostrar 1 log por linha
 git log --pretty="format:%h %s" //traz o hash resumido seguido pela mensagem do commit
+git log --graph                //ver me modo grafico
+git log -p                    //ver o commit feito
 
 Site com opções 
 https://devhints.io/git-log
@@ -44,3 +46,80 @@ git remote -v
 
 Diretório do outro usuário: C:/Desenvolvimento/GitAndGithub/coworking
 git clone /c/Desenvolvimento/GitAndGithub/servidor projeto
+
+Site para visualizar os comandos feito no GIT
+http://git-school.github.io/visualizing-git/
+
+Criar automaticamente um commit com o branch atual e todo o conteúdo de nossa branch titulo
+git merge titulo
+
+
+Desta forma colocaremos o HEAD na branch master, ou seja, 
+faremos com que o nosso código esteja no estado que o deixamos com o último commit na master. 
+Depois, uniremos o trabalho da branch titulo com a branch atual (master).
+git checkout master
+git merge titulo 
+
+
+Estando na master, queremos basear esta branch em titulo, assim, executaremos 'git rebase titulo'
+e o Git pegará os commits na branch titulo, atualizando master, que possui todos os commits contidos em titulo, 
+além do commit que havia nela mesma. Deste modo, geramos uma única linha, sem confusões. 
+o REBASE atualiza a branch, mantendo o trabalho dela como sendo o último
+git rebase titulo
+
+
+Todos os commits que forem feitos neste repositório irão pertencer a ela
+git config --local user.name "Ana"
+
+Serve para navegarmos em estados do repositório, seja por meio de branches ou desfazendo modificações no arquivo.
+git checkout
+
+Desfazer uma alteraão no arquivo index.html
+Com o git checkout nós desfazemos uma alteração que ainda não foi adicionada ao index ou stage, ou seja, antes do git add.
+git checkout -- index.html
+
+Desfazer uma alteraão no arquivo index.html depois que executou git add
+Depois de adicionar com git add, para desfazer uma alteração, precisamos tirá-la deste estado, com git reset
+git reset HEAD index.html
+
+Desfazendo um commit 
+Agora, se já realizamos o commit, o comando git revert pode nos salvar.
+git revert b038fa25de2a4b00e98322c33d4ba2c0b3a2a4ef
+
+Conseguimos salvar todas as alterações, no caso, somente o arquivo index.html, 
+para um local temporário, sem necessidade de um commit ou de se gerar um commit para isto.
+git stash
+
+Teremos uma lista de tudo que estiver salvo nestas condições
+git stash list
+
+Continuar trabalhando no que estava salvo
+git stash apply 0
+
+Retirar da lista do stash
+git stash drop
+
+No caso de querermos fazer ambas as ações ao mesmo tempo, ou seja, pegar a última alteração adicionada à stash, 
+e já removê-la de lá, utilizaremos
+git stash pop
+
+Ver diferença entre commit ea539b3 e 6ca12ac
+git diff ea539b3..6ca12ac
+
+Criaremos um marco para onde poderemos ir, e que terá um código correspondente àquele estado
+git tag -a v0.1.0 -m "Lançando a primeira versão (BETA) da aplicação de cursos".
+
+--------------------------------------------------------------------------------------------------------------------------
+Que o Git pode nos ajudar a desfazer alterações que não vamos utilizar;
+Que, para desfazer uma alteração antes de adicioná-la para commit (com git add), podemos utilizar o comando git checkout -- <arquivos>;
+Que, para desfazer uma alteração após adicioná-la para commit, antes precisamos executar o git reset HEAD <arquivos> e depois podemos desfazê-las com git checkout -- <arquivos>;
+Que, para revertermos as alterações realizadas em um commit, o comando git revert pode ser a solução;
+Que o comando git revert gera um novo commit informando que alterações foram desfeitas;
+Que, para guardar um trabalho para retomá-lo posteriormente, podemos utilizar o git stash;
+Que, para visualizar quais alterações estão na stash, podemos utilizar o comando git stash list;
+Que, com o comando git stash apply <numero>, podemos aplicar uma alteração específica da stash;
+Que o comando git stash drop <numero> remove determinado item da stash;
+Que o comando git stash pop aplica e remove a última alteração que foi adicionada na stash;
+Que o git checkout serve para deixar a cópia do código da nossa aplicação no estado que desejarmos:
+git checkout <branch> deixa o código no estado de uma branch com o nome <branch>;
+git checkout <hash> deixa o código no estado do commit com o hash <hash>.
