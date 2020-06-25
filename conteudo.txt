@@ -32,6 +32,8 @@ index: Local onde o Git armazena o que será commitado, ou seja, o local entre a
 Alterar configuração local ou global do git
 git config --local ou config --global
 
+Clonar uma branch especifica
+git clone -b <branch> <remote_repo>
 --------------------------------------------------------------------------------------------------------------------------
 Diretório: /c/Desenvolvimento/GitAndGithub/servidor
 Como este servidor será um repositório do Git que somente armazenará as alterações, ou seja, não o acessaremos para editar arquivos poderá ser criado usando a opção --bare.
